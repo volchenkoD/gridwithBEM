@@ -1,0 +1,525 @@
+@media (min-width: 769px) and (max-width: 1025px){
+    .main-page{
+        .first__page{
+            .first__img{
+                grid-column-start: 3;
+                grid-column-end: 5;
+            }
+            .second__img{
+                grid-column-start: 9;
+                grid-column-end: 11;
+            }
+        }
+        /*бекграунд спецпредложений*/
+        .sale_bacground{
+            .sale__slider{
+                .slider__img{
+                    img{
+                        width: 250px;
+                    }
+                }
+                .slider__title{
+                    .card__price{
+                        text-align-last: left;
+                        margin-top: 10px;
+                        margin-left: -200px;
+                    }
+                    .sale__button{
+                        margin-top: -60px;
+                        margin-left: -10px;
+                    }
+                }
+                .stail{
+                    .slider__img{
+                        img{
+                            margin-top: 0px;
+                            width: 150px;
+                        }
+                    }
+                }
+                .safeNoFire{
+                    .slider__img{
+                        img{
+                            width: 220px;
+                            margin-top: 50px;
+                            margin-bottom: 70px;
+                        }
+                    }
+                    .sale__button{
+                        margin-top: -40px;
+                        margin-left: -10px;
+                    }
+                }
+            }
+        }
+        /*секция о компании*/
+        .about__company{
+            .company__container{
+                .company__images{
+                    img{
+                        width: 300px;
+                        margin-left: 25px;
+                    }
+                }
+            }
+        }
+        .contacts{
+            .contacts__maps{
+                .maps{
+                    width: 350px;
+                }
+            }
+        }
+    }
+    .catalog_pages{
+        .header__background-color{
+            .header__container{
+                .header__nav{
+                    grid-column-start: 3;
+                    .scream{
+                        p{
+                            margin: 0px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*для планшетов*/
+@media (min-width: 481px) and (max-width: 769px){
+    /*бекграунд спецпредложений*/
+    .main-page{
+        .sale_bacground{
+            .sale__slider{
+                .slider__img{
+                    img{
+                        width: 200px;
+                    }
+                }
+                .slider__title{
+                    .card__price{
+                        text-align-last: left;
+                        margin-top: 10px;
+                        margin-left: -200px;
+                    }
+                    .sale__button{
+                        margin-top: 10px;
+                        margin-left: -90px;
+                    }
+                }
+                .stail{
+                    .slider__img{
+                        img{
+                            margin-top: 0px;
+                            width: 150px;
+                        }
+                    }
+                }
+                .safeNoFire{
+                    .slider__img{
+                        img{
+                            width: 220px;
+                            margin-top: 50px;
+                            margin-bottom: 70px;
+                        }
+                    }
+                    .sale__button{
+                        margin-top: 10px;
+                        margin-left: -80px;
+                    }
+                }
+            }
+        }
+        .contacts{
+            .contacts__maps{
+                .maps{
+                    width: 350px;
+                }
+            }
+        }
+    }
+    .catalog_pages{
+        .catalog_background{
+            background-color: rgba(202, 194, 178, 1);
+            .catalog__about{
+                margin: 20px 20px;
+                .catalog__goods{
+                    width: 300px;
+                    height: 300px;
+                    background: url(../../build/img/bg/fortable.png) no-repeat center center;
+                    &:hover{
+                        background: url(../../build/img/bg/fortable2.png) no-repeat center center;
+                    }
+                    .catalog__goods-paragraphColor{
+                        position: static;
+                        margin-top: 70px;
+                        margin-left: 40px;
+                        &:hover{
+                            color: #10cabf;
+                        }
+                    }
+                    .img1{
+                        width: 100px;
+                        position: static;
+                        margin-left: 150px;
+                        margin-top: -60px;
+                    }
+                    .img2{
+                        display: none;
+                    }
+                    .safe1{
+                        width: 150px;
+                        position: static;
+                        margin-left: 150px;
+                        margin-top: -60px;
+                    }
+                    .med1{
+                        width: 230px;
+                        position: static;
+                        margin-left: 120px;
+                        margin-top: -60px;
+                    }
+                    .prof1{
+                        width: 200px;
+                        position: static;
+                        margin-left: 100px;
+                        margin-top: -20px;
+                    }
+                    .st1{
+                        width: 150px;
+                        position: static;
+                        margin-left: 150px;
+                        margin-top: -10px;
+                    }
+                    .meb1{
+                        width: 250px;
+                        position: static;
+                        margin-left: 100px;
+                        margin-top: -70px;
+                    }
+                }
+            }
+        }
+        .footer__background{
+            .footer{
+                nav{
+                    .sochial{
+                        .sochial__links{
+                            img{
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .about__me{
+            p{
+                margin-right: 40px;
+            }
+        }
+    }
+}
+@media (min-width: 360px) and (max-width : 480px){
+    .main-page{
+        .first__page{
+            /*стили для заголовка и абзаца первой страницы*/
+            .page__title{
+                margin-left: -20px;
+                /*заголовок*/
+                h1{
+                    font-size: 1.75rem;
+                    color: #10cabf;
+                }
+                /*абзац*/
+                p{
+                    font-size: 1rem;
+                    color: #10cabf;
+                }
+            }
+            .first__img, .second__img{
+                margin-left: -20px;
+                img{
+                    width: 100px;
+                    height: 100px;
+                    display: block;
+                    position: relative;
+                    border-radius: 100%;
+                    border: 3px solid #10cabf;
+                    margin-top: 100px;
+                }
+                p{
+                    position: relative;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 1.125rem;
+                    line-height: 1.5rem;
+                    text-align: center;
+                    padding-top: 20px;
+                }
+            }
+            .first__img{
+                grid-column-start: 2;
+                grid-column-end: 6;
+                img{
+                    margin-left: 20px;
+                }
+                p{
+                    margin-left: 10px;
+                }
+            }
+            .second__img{
+                grid-column-start: 9;
+                grid-column-end: 11;
+                p{
+                    margin-left: -5px;
+                }
+            }
+            a{
+                color: white;
+            }
+        }
+        .sale_bacground{
+
+            .sale__slider{
+                .card{
+                    display: grid;
+                    grid-template-columns:  none;
+                    grid-template-rows: 1fr 1fr 1fr;
+                    .slider__img{
+                        grid-column-start: 1;
+                        grid-column-end: -1;
+                        margin-bottom: 50px;
+                        img{
+                            width: 150px;
+                            margin-left: 80px;
+                        }
+                    }
+                    .slider__title{
+                        grid-row-start: 2;
+                        grid-row-end: 4;
+                        justify-content: center;
+                        align-content: center;
+                        justify-items: center;
+                        grid-template-columns: none;
+                        h3{
+                            font-size: 0.875rem;
+                            text-align: center;
+                            margin: 10px auto;
+                            margin-left: -45px;
+                            margin-top: 50px;
+                        }
+                            li{
+                                display: none;
+                            }
+                        .card__price{
+                            text-align-last: center;
+                            margin-top: 10px;
+                            margin-left: -125px;
+                        }
+                        .sale__button{
+                            margin-top: 20px;
+                            margin-left: 0px;
+                            width: 250px;
+                            margin-bottom: 50px;
+                        }
+                    }
+                }
+                .stail{
+                    .slider__img{
+                        img{
+                            margin-top: 0px;
+                            width: 100px;
+                            margin-left: 100px;
+                        }
+                    }
+                }
+                .safeNoFire{
+                    .slider__img{
+                        img{
+                            width: 150px;
+                            margin-top: 50px;
+                            margin-bottom: 0px;
+                            //margin-left: 0px;
+                        }
+                    }
+                    .slider__title{
+                        h3{
+                            font-size: 0.875rem;
+                            text-align: center;
+                            margin: 10px auto;
+                            margin-left: -55px;
+                            margin-top: 50px;
+                        }
+                        .sale__button{
+                            margin-top: 20px;
+                            margin-left: 0px;
+                        }
+                    }
+                }
+            }
+        }
+        .catalog__container{
+            .header__button{
+                margin-left: 0;
+            }
+        }
+        .button__hits{
+            margin: 20px auto ;
+        }
+        .about__advantage{
+            .header__button{
+                margin: 50px auto ;
+            }
+            .advanta{
+                img{
+                    width: 120px;
+                    height: auto;
+                }
+            }
+        }
+        .contacts{
+            .contacts__maps{
+                .maps{
+                    width: 320px;
+                    margin-left: 10px;
+                }
+            }
+        }
+        .footer__background{
+            .footer{
+                nav{
+                    .footer__links{
+                        display: block;
+                    }
+                    .sochial{
+                        .sochial__links{
+                            img{
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .about__me{
+            p{
+                margin-right: 40px;
+            }
+        }
+    }
+    .catalog_pages{
+        .catalog_background{
+            background-color: rgba(202, 194, 178, 1);
+            .catalog__goods{
+                cursor: pointer;
+                background: url(../../build/img/bg/fortable.png) no-repeat center center;
+                width: 300px;
+                height: 300px;
+                &:hover{
+                    background: url(../../build/img/bg/forTable2.png) no-repeat center center;
+                    width: 300px;
+                    height: 300px;
+                }
+                .catalog__goods-paragraphColor{
+                    position: static;
+                    margin-top: 70px;
+                    margin-left: 50px;
+                    &:hover{
+                        color: #10cabf;
+                    }
+                }
+                .img1{
+                    width: 100px;
+                    position: static;
+                    margin-top: -60px;
+                    margin-left: 150px;
+                }
+                .img2{
+                    display: none;
+                }
+                .safe1{
+                    width: 180px;
+                    position: static;
+                    margin-top: -80px;
+                    margin-left: 120px;
+                }
+                .med1{
+                    width: 200px;
+                    position: static;
+                    margin-top: -50px;
+                    margin-left: 130px;
+                }
+                .prof1{
+                    width: 200px;
+                    position: static;
+                    margin-top: -30px;
+                    margin-left: 100px;
+                }
+                .st1{
+                    width: 140px;
+                    position: static;
+                    margin-top: -30px;
+                    margin-left: 130px;
+                }
+                .meb1{
+                    width: 200px;
+                    position: static;
+                    margin-top: -60px;
+                    margin-left: 120px;
+                }
+            }
+        }
+        .footer__background{
+            .footer{
+                nav{
+                    .sochial{
+                        .sochial__links{
+                            img{
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+                    }
+                }
+                .footer__cont{
+                    grid-column-start: 7;
+                    grid-column-end: -1;
+                }
+            }
+        }
+        .about__me{
+            p{
+                margin-right: 40px;
+            }
+        }
+    }
+    .safe__pages{
+        .footer__background{
+            .footer{
+                nav{
+                    .sochial{
+                        .sochial__links{
+                            img{
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+                    }
+                }
+                .footer__cont{
+                    grid-column-start: 7;
+                    grid-column-end: -1;
+                }
+            }
+        }
+        .about__me{
+            p{
+                margin-right: 40px;
+            }
+        }
+    }
+}

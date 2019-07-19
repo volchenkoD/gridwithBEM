@@ -1,0 +1,605 @@
+/*для небольших мониторов*/
+@media (min-width: 769px) and (max-width: 1024px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav__links{
+        width: 80%;
+    }
+    .header__nav{
+        grid-column-start: 2;
+    }
+    .scream{
+        margin-left: 20px;
+    }
+    .card{
+        height: 520px;
+    }
+    .slider__title{
+        grid-template-rows: repeat(4, auto);
+    }
+    .card__price, .sale__button{
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+
+    .company__images{
+        grid-column-end: 3;
+    }
+    .button__company{
+        margin-top: 10px;
+    }
+    .company__text{
+        grid-column-start: 6;
+    }
+    .links__none{
+        display: none;
+    }
+    //shelving pages
+    .shelving__title, .shelving__title-mini{
+        grid-column-end: -1;
+    }
+    .shelving__title-mini{
+        margin-bottom: 30px;
+    }
+    .full__image{
+        grid-column-end: 5;
+        margin-top: -400px;
+        img{
+            width: 200px;
+            margin: 20px 0;
+        }
+    }
+    .table__text{
+        margin-right: 20px;
+    }
+    .door__button{
+        width: auto;
+        padding: 20px 50px;
+    }
+    .pieces__img{
+        left: 350px;
+    }
+    .pieces__img-marginTop{
+        top: 250px;
+    }
+}
+/*для планшетов*/
+@media (min-width: 481px) and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .first__page{
+        background-size: cover;
+    }
+     //скрытие ненужных ссылок
+     .nav__links{
+        position: absolute;
+        right: 0px;
+        height: 30vh;
+        width: 50%;
+        top: 10.5vh;
+        background-color: rgba(202, 194, 178, 0.6);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 5;
+        display: none;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        li{
+            opacity: 0;
+        }
+        a{
+            font-size: 14px;
+            margin-right: 0px;
+            margin-top: -50px;
+            &:hover{
+                color: #5a1a4a;
+                border-bottom: none;
+            }
+        }
+    }
+    .header__logo{
+        position: relative;
+        left: -180px;
+    }
+    .header__logo-table{
+        left: -280px;
+    }
+    .opacityFirstPage{
+        opacity: 0.2;
+    }
+    .header__nav{
+        width: 100%;
+    }
+    //бургер меню
+    .burger__menu{
+        margin-top: -10px;
+        display: block;
+        cursor: pointer;
+        padding-right: 0px;
+        position: relative;
+        left: 160px;
+    }
+    .toggle{
+        .burger__menu-line1{
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        .burger__menu-line2{
+            opacity: 0;
+        }
+        .burger__menu-line3{
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+    }
+    .nav__active{
+        transform: translateX(0%);
+        display: block;
+        display: flex;
+    }
+    @keyframes navLinkFade {
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    .scream{
+        display: none;
+    }
+    .card{
+        height: 520px;
+    }
+    .sale__button-height{
+        height: 60px;
+    }
+    .catalog__container{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    .company__images{
+        opacity: 0.2;
+    }
+    .company__text{
+        color: black;
+    }
+    .footer__links{
+        display: block;
+    }
+    .footer__links-novisible{
+        visibility: hidden;
+    }
+    .sochial{
+        top: -80px;
+        margin-left: 250px;
+    }
+    //catalog
+    .catalog__about{
+        grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+        grid-auto-rows: 300px;
+    }
+    //door pages
+    .door__info{
+        grid-template-columns: repeat(auto-fill,minmax(330px,1fr));
+    }
+    .pieces__img{
+        display: block;
+        left: 0%;
+        top: 0%;
+        position: relative;
+    }
+    .text__img{
+        margin-left: -120px;
+    }
+    .piecesImg{
+        display: block;
+        margin-top: 70px;
+        margin-right: 0%;
+    }
+    .noFire__door{
+        margin-bottom: 50px;
+    }
+    //shelving pages
+    .shelving__title, .shelving__title-mini{
+        grid-column-end: -1;
+    }
+    .shelving__title-mini{
+        margin-bottom: 30px;
+    }
+    .full__image{
+        grid-column-end: 5;
+        margin-top: -400px;
+        img{
+            width: 200px;
+            margin: 20px 0;
+        }
+    }
+    .table__text{
+        margin-right: 20px;
+    }
+    .text__img{
+        margin-left: 0px;
+    }
+    .bench__img{
+        img{
+            width: 500px;
+        }
+    }
+    
+}
+/*для телефонов*/
+@media (min-width: 360px) and (max-width : 480px){
+    //все падинги выравниваются по оси х
+    body{
+        overflow-x: hidden;
+    }
+    //масштабирование картинки
+    .first__page{
+        background-size: cover;
+    }
+    //скрытие ненужных ссылок
+    .nav__links{
+        position: absolute;
+        right: 0px;
+        height: 30vh;
+        width: 50%;
+        top: 100%;
+        background-color: rgba(202, 194, 178, 0.6);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 5;
+        display: none;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        li{
+            opacity: 0;
+        }
+        a{
+            font-size: 14px;
+            margin-right: 20px;
+            margin-top: -50px;
+            &:hover{
+                color: #5a1a4a;
+                border-bottom: none;
+            }
+        }
+    }
+    .opacityFirstPage{
+        opacity: 0.2;
+    }
+    .header__nav{
+        width: 100%;
+    }
+    //бургер меню
+    .header__logo{
+        position: relative;
+        left: -20%;
+    }
+    .burger__menu{
+        margin-top: -10px;
+        display: block;
+        cursor: pointer;
+        padding-right: 0px;
+        position: relative;
+        left: 10%;
+    }
+    .scream{
+        display: none;
+    }
+    .toggle{
+        .burger__menu-line1{
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        .burger__menu-line2{
+            opacity: 0;
+        }
+        .burger__menu-line3{
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+    }
+    .nav__active{
+        transform: translateX(0%);
+        display: block;
+        display: flex;
+    }
+    @keyframes navLinkFade {
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    //изменение внутренних отступов
+    .page__title{
+        padding-top: 50px;
+    }
+    // изменение внешних отступов
+    .header__button{
+        margin-top: 50px;
+        margin-left: 0px;
+    }
+    //изменение верхнего отступа в заголовках секций
+    .title{
+        margin-top: 50px;
+    }
+    // изменение карточек со спецпредложением
+    .card{
+        padding: 10px 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        width: 320px;
+        height: 450px;
+        margin: 0 30px;
+    }
+    // сдвиг точек отобращающих позиции в слайдере
+    .circle_scroll{
+        margin: 10px;
+    }
+    //уменьшение внешнего отсупа контейнера каталога
+    .catalog__container{
+        margin-left: -20px;
+    }
+    //уменьшение внешнего отсупа контейнера преимуществ
+    .about__advantage{
+        margin-left: 0px;
+    }
+    // удаление внутренних отсупов
+    .about__company{
+        padding: 0px;
+    }
+    // удаление внутренних отсупов
+    .company__container{
+        padding: 0px;
+    }
+    // удаление картинки в секции о компании
+    .company__images{
+        display: none;
+    }
+    // сдвиг кнопки в секции о компании
+    .button__company{
+        margin-left: 10px;
+    }
+    // изменение ширины секции с хитами продаж и изменение левого отступа
+    // изменение позиции теста в секции о компании
+    .company__text{
+        grid-column-start: 1;
+        grid-column-end: -2;
+        margin-left: 10px;
+    }
+    //изменение колонок в секции контакты
+    .contacts__maps{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+    }
+    // скрытие ненужных ссылок в секции футер
+    .footer__links-novisible{
+        visibility: hidden;
+    }
+    //нижний внутренний отступ в подвале сайта
+    .footer{
+        padding-bottom: 60px;
+    }
+    // изменение колонок для адреса в подвале сайта
+    .footer__cont{
+        grid-column-start: 7;
+        grid-column-end: -1;
+    }
+    // изменение колонок для панели навигации в подвале сайта
+    nav{
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+    .footer__links{
+        display: block;
+    }
+    //позиционирование социальных ссылок
+    .sochial{
+        top: -60px;
+        left: 180px;
+        padding-bottom: 10px;
+    }
+    .sochial__links{
+        padding-left: 0px;
+        margin-left: 20px;
+    }
+    //секция о разрабочике
+    .about__me{
+        padding-right: 0px;
+    }
+    //catalog
+    .food__pieces{
+        margin-left: 10px;
+    }
+    .foodPieces__links{
+        padding-left: 10px;
+    }
+    .foodPieces__links-hover:hover{
+        font-size: 1rem;
+        color: #10cabf;
+    }
+    //изменение размера колонок на странице каталога
+    .catalog__about{
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        grid-auto-rows: 300px;
+    }
+    //
+
+    //изменение карточек с дверьми
+    .about__entryDoor{
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        margin: 0 20px;
+        grid-auto-rows: 420px;
+        margin-top: 0px;
+        justify-items: stretch;
+        justify-content: stretch;
+        align-content: stretch;
+    }
+    .about__door{
+        grid-template-columns: auto;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+        padding-bottom: 40px;
+    }
+    .about__door-mobile{
+        grid-column-start: 1;
+        grid-column-end: -1;
+        width: 100px;
+        height: 200px;
+    }
+    .about__door-kvartet{
+        width: 130px;
+    }
+    .about__door-luck{
+        width: 100px;
+        height: 100px;
+    }
+    .about__text{
+        grid-column-start: 1;
+        grid-column-end: -1;
+        margin-left: 0px;
+    }
+    .about__info{
+        font-size: 1rem;
+        text-align: center;
+        margin-left: 0px;
+    }
+    .about__info-title{
+        margin-top: 20px;
+        font-size: 1rem;
+        text-align: center;
+        margin-left: 0px;
+    }
+    .paragraf__lineHeight{
+        visibility: hidden;
+    }
+    .door__button{
+        margin: 0;
+        margin-top: -10px;
+        margin-bottom: 20px;
+        width: auto;
+        text-align: center;
+        font-size: 0.875rem;
+    }
+    .door__button-line{
+        margin: 0;
+        margin-top: -10px;
+        margin-bottom: 20px;
+        width: auto;
+        text-align: center;
+        font-size: 0.875rem;
+    }
+    //страницы с дверьми
+    .door__info{
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    }
+    .about__noFire{
+        grid-template-columns: auto;
+    }
+    .noFire__door{
+        grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        grid-auto-rows: 250px;
+    }
+    .noFire__door-changeRows{
+        grid-auto-rows: 270px;
+    }
+    .noFire__door-weight{
+        grid-auto-rows: 200px;
+    }
+    .left__list, .right__list{
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+    .full__img{
+        width: 300px;
+    }
+    .piecesImg{
+        display: block;
+        margin-right: 0%;
+        margin-top: 0px;
+    }
+    .pieces__img{
+        display: block;
+        position: relative;
+        left: 0%;
+        top: 0%;
+    }
+    .pieces__img-size{
+        width: 85px;
+        height: 90px;
+        margin-right: 5px;
+    }
+    .color__img{
+        margin-top: 0px;
+    }
+    .text__img{
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    .table__door{
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 0.875rem;
+    }
+    .door__table{
+        height: 300px;
+        td{
+            padding-left: 10px;
+        }
+    }
+    //страницы со стеллажами
+    .shelving__container{
+        grid-template-rows: repeat(4, auto);
+    }
+    .shelving__title{
+        grid-column-start: 2;
+        grid-column-end: -1;
+    }
+    .shelving__title-mini{
+        grid-column-start: 2;
+        grid-column-end: -1;
+    }
+    .full__image{
+        grid-column-end: -1;
+        margin-top: 0px;
+        img{
+            width: 200px;
+            margin: 20px 0;
+        }
+    }
+    .table__text{
+        grid-column-start: 1;
+        margin: 0px;
+    }
+    .little__image{
+        grid-column-start: 1;
+        display: block;
+        margin-left: 0;
+    }
+    .table__paragraff{
+        margin: 20px 10px;
+    }
+    .shelving__table{
+        margin-left: 10px;
+        font-size: 0.875rem;
+        width: 90%;
+    }
+    .small__image{
+        grid-column-start: 1;
+        margin-bottom: 20px;
+    }
+    .bench__img{
+        img{
+            width: 200px;
+        }
+    }
+}

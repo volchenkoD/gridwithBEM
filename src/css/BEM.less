@@ -1,0 +1,922 @@
+/*фон шапки*/
+.header_background_color{
+    background: rgba(59, 53, 40, 0.6);
+    position: relative;
+}
+/*блок header*/
+.header{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: auto;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+/*навигация*/
+.header__nav{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.header__list{
+    display:flex;
+    justify-content: space-around;
+    align-content: center;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.scream{
+    font-size: 1.125rem;
+    color:#4f095c;
+}
+/*ссылки*/
+.nav__links{
+    display:flex;
+    justify-content: space-around;
+    align-content: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 60%;
+
+    a{
+        color: #4f095c;
+        margin-top: 20px;
+        line-height: 24px;
+        &:hover{
+            color: #10cabf;
+            border-bottom: 1px #10cabf solid;
+        }
+    }
+}
+/*логотип*/
+.header__logo{
+    margin: 10px 0;
+}
+/*бургер меню*/
+.burger{
+    margin-top: 14px;
+    display: none;
+    transition: all 0.3s ease;
+    div{
+        width: 30px;
+        height: 3px;
+        background-color: #5a1a4a;
+        margin: 5px;
+    }
+}
+/*наведение на ссылки*/
+.header__link-hover:hover{
+    color: #10cabf;
+    border-bottom: 1px #10cabf solid;
+}
+//burger
+.burger__menu{
+    margin-top: 14px;
+    display: none;
+    transition: all 0.3s ease;
+    div{
+        width: 30px;
+        height: 3px;
+        background-color: #5a1a4a;
+        margin: 5px;
+    }
+}
+/*первый экран*/
+.first__page{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, auto);
+    background: url(../../build/img/bg/25853939abf2b28f6e53c8bd71646e7e.png) no-repeat center center;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    /*наложение цвета на первый экран*/
+    &::before{
+        position: absolute;
+        background-color: rgba(1, 1, 1, .8);
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+/*заголовок первого экрана*/
+.page__title{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    position: relative;
+    display: block;
+    text-align: center;
+    padding-top: 100px;
+}
+/*блок с кнопокой*/
+.header__button{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    position: relative;
+    cursor: pointer;
+    margin-top: 100px;
+    padding: 20px 70px;
+    background-color: #10cabf;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    margin-bottom: 100px;
+    font-size: 1.125rem;
+}
+/*заголовки второго уровня*/
+.title{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    font-size: 2rem;
+    margin: 70px 0px 40px 30px;
+}
+/*слайдер*/
+.card{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    border: 5px solid #4f095c;
+    margin: 0 20px;
+    padding: 25px 50px;//посмотреть этот параметр
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: absolute;
+    opacity: 1;
+    transition: all ease 1s;
+}
+/*картинки карточки*/
+.slider__img{
+    img{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+/*описание карточки*/
+.slider__title{
+    grid-column-start: 3;
+    grid-column-end: -1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+/*стоимость товара в карточке*/
+.card__price{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+/*блок с кнопокой*/
+.sale__button{
+    grid-column-start: 2;
+    grid-column-end: -2;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    padding: 20px 20px;
+    background-color: #10cabf;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 1.125rem;
+    width: 350px;// этот параметр
+    margin-left: 30px;
+}
+/* высота отдельных кнопок*/
+.sale__button-height{
+    height: 60px;
+}
+/*прозрачность карточки*/
+.sale__slider .opacity0{
+    opacity: 0;
+}
+/*Нижний скрол*/
+.scroll{
+    display: inline-flex;
+    justify-content: center;
+    align-content: space-between;
+}
+.circle_scroll{
+    width: 14px;
+    height: 14px;
+    background-color: #10cabf;
+    border-radius: 100%;
+    margin: 30px 30px;
+}
+.active-color{
+    background-color: #4f095c;
+}
+/*секция с каталогом*/
+.catalog{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    color: white;
+}
+/*бекграунд каталога*/
+.catalog-background{
+    background: url(../../build/img/bg/dark-oak-wood-grain-chipboard-4k-2160p-uhd-panning-footage-dark-texture-lin_ej9rjkv5l__F0000.png) no-repeat center center;
+}
+/*основные свойства каталога*/
+.catalog__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));//этот параметр
+    grid-auto-rows: 150px;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    row-gap: 40px;
+}
+/*разделы каталога*/
+.goods__catalog{
+    background-color: #fff;
+    width: 102px;
+    height: 102px;
+    border-radius: 100%;
+    margin-bottom: 60px;
+    color: white;
+}
+/*стили параграфов*/
+.paragraff-color{
+    color: white;
+    position: relative;
+    top: 40px;
+    text-align: center;
+}
+/*стили определенных категорий*/
+.paragraff-color-safe{
+    top: 60px;
+}
+.paragraff-color-shelving{
+    top: 60px;
+}
+.paragraff-color-mtall{
+    top: 50px;
+}
+.paragraff-color-production{
+    top: 60px;
+    left: -4%;
+    justify-self: center;
+}
+/*стили картинок каталога*/
+.goods__images{
+    position: relative;
+    left: 30px;
+    top:15px;
+    align-self: center;
+}
+/*стили определенных категорий*/
+.goods__images-safe{
+    left: 20px;
+    top:25px;
+}
+.goods__images-shelving{
+    top: 20px;
+    left: 28%;
+}
+.goods__images-medicina{
+    left: 32%;
+}
+.goods__images-metall{
+    left: 24%;
+    top: 20px;
+}
+/*секция о компании*/
+.company__container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 70px 0;//этот параметр
+    border-bottom:  2px solid #10cabf;
+}
+/*положении картинки*/
+.company__images{
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+/*описание о компании*/
+.company__text{
+    grid-column-start: 5;
+    grid-column-end: -1;
+    margin-left: 20px;
+}
+/*заголовок компании*/
+.title__company{
+    margin-top: 0px;
+    margin-left: 0px;
+}
+/*описание компании*/
+.company__paragraff{
+    line-height: 1.125rem;
+    padding: 5px 10px;// этот параметр
+}
+/*кнопка секции о компании*/
+.button__company{
+    width: 300px;//этот параметр
+}
+/*секция с хитами продаж*/
+.hit_sale{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    margin-bottom: 50px;
+}
+.about__hits{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));// этот параметр
+    column-gap: 20px;
+    grid-auto-rows: auto;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    row-gap: 40px;
+    margin: 0 20px;
+}
+.hit__goods{
+    border: #5a1a4a 3px solid;
+    padding: 10px;
+}
+.hit__goods .opacity0{
+    opacity: 0;
+}
+.hits__title{
+    font-size: 1.25rem;
+    margin: 10px 0;
+}
+.hits__text{
+    color: red;
+}
+.button__hits{
+    margin: 40px 0;
+    font-size: 0.875rem;
+}
+/*секция с преимуществами*/
+.advantage__section{
+    background: url("../../build/img/bg/dark-oak-wood-grain-chipboard-4k-2160p-uhd-panning-footage-dark-texture-lin_ej9rjkv5l__F0000.png") no-repeat center center;
+    color: white;
+}
+/*карточки*/
+.about__advantage{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));//этот параметр
+    column-gap: 20px;
+    grid-auto-rows: auto;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 20px;
+}
+/*секция с контактами*/
+/*секция с картой*/
+.contacts__maps{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-content: center;
+    align-items: center;
+    margin:20px;
+    color: white;
+}
+.contacts__all{
+    grid-column-start: 7;
+    grid-column-end: -1;
+    margin-top: 30px;
+}
+.maps{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    width: 500px;
+    height: auto;
+}
+/*подвал*/
+.footer__background{
+    background: url(../../build/img/bg/dark-oak-wood-grain-chipboard-4k-2160p-uhd-panning-footage-dark-texture-lin_ej9rjkv5l__F0000.png) no-repeat center center;
+}
+.footer{
+    color: #10cabf;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 200px;
+    margin: 20px;
+}
+/*панель навигации*/
+nav{
+    grid-column-start: 1;
+    grid-column-end: 9;
+}/*ссылки по странице*/
+.footer__links{
+    display:flex;
+    justify-content: space-around;
+    align-content: center;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+/*ссылки внутрь каталога*/
+.catalog__links{
+    margin-top: 30px;
+    padding: 10px 0;//этот параметр
+    font-weight: normal;
+    font-size: 0.875rem;
+}
+/*адресс*/
+.footer__cont{
+    grid-column-start: 9;
+    grid-column-end: -1;
+    text-align: right;
+}
+/*цвет ссылок*/
+.footer__links-color{
+    color: #10cabf;
+}
+/*секция с каталогом*/
+.catalog_pages{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+    font-family: 'Roboto', sans-serif;
+}
+.catalog__links-padding{
+    padding-bottom: 5px;
+}
+.sochial__links{
+    padding-left: 30px;//этот параметр
+}
+.footer__cont-padding{
+    line-height: 1.5rem;
+    padding-bottom: 5px;
+}
+/*социальные иконки*/
+.sochial{
+    position: relative;
+    left: 46%;
+    top: -40%;
+}
+/*ссылка на почту*/
+.about__me{
+    background-color: rgb(41, 30, 30);
+    grid-column-start: 1;
+    grid-column-end: -1;
+    font-size: 1.125rem;
+    color: white;
+    text-align: right;
+    line-height: 1.5rem;
+    padding-right: 20px;//этот параметр
+}
+/*страница каталога*/
+/*основа шапки*/
+.catalog_background_color{
+    background: rgba(202,194,178,.6);
+}
+/*основа крошек*/
+.food__pieces-background{
+    background-color: rgb(236, 225, 238);
+}
+.food__pieces{
+    padding-top: 10px;
+    margin-bottom: 10px;
+    line-height: 2;
+    margin-left: 40px;
+}
+.foodPieces__links{
+    padding-left: 20px;
+    color: #5a1a4a;
+}
+.foodPieces__links-hover:hover{
+    font-size: 1.125rem;
+}
+/*ссылки в каталог*/
+.catalog__about{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-auto-rows: 450px;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    row-gap: 40px;
+    margin: 70px 0;
+}
+.catalog__goods-paragraphColor{
+    color: #4f095c;
+    line-height: 1.250rem;
+}
+/*итемы о товаре*/
+.main__product{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    row-gap: 40px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+/*картинки*/
+.product__image-size{
+    width: 120px;
+    height: 160px;
+    margin: 20px 0;
+}
+.product__image-width{
+    width: 150px;
+    height: 180px;
+}
+.product__image-small{
+    width: 100px;
+    height: 100px;
+}
+/*страницы товара*/
+.safe__pages{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, auto);
+    font-family: 'Roboto', sans-serif;
+}
+/*описание секции*/
+.text__category{
+    margin-top: 50px;
+    padding: 40px;
+    color: #000;
+    font-family: Philosopher,sans-serif;
+}
+/*заголово описания секции*/
+.text__category-title{
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+/*ширина линий для категорий в каталоге*/
+.main__safe{
+    grid-auto-rows: 320px;
+    color: #7c2165;
+}
+.product__item-borderBottom{
+
+    border-bottom: 2px solid #000;
+}
+/*ширина таблицы с габаритами товара*/
+.table__width{
+    width: 200px;
+}
+/*сдвиг влево первойго столбца таблицы*/
+.left__item{
+    text-align: left;
+    padding-bottom: 5px;
+}
+/*сдвиг вправо правого столбца таблицы*/
+.right__item{
+    text-align: right;
+    padding-bottom: 5px;
+}
+/*отступ для цены и размер шрифта*/
+.sale__item{
+    margin-top: 10px;
+    font-size: 1.125rem;
+    margin-bottom: 20px;
+}
+/*стоимость товара*/
+.sale__item-spanColor{
+    color: #10cabf;
+}
+.go__back{
+    display: flex;
+    color: #7c2165;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+.go__back-paragraph{
+    font-size: 1.25rem;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+/* подъем значения плюс*/
+.right__item-up{
+    position: relative;
+    left: 4px;
+    top: -2px;
+
+}
+/* отступ вниз значения минус*/
+.right__item-down{
+    position: relative;
+    left: -4px;
+    top: 5px;
+    font-weight: bold;
+}
+/*секция уточнения у менеджера*/
+.about__info{
+    font-size: 1.250rem;
+    margin-top: 20px;
+    color: rgb(81, 57, 219);
+}
+/*секция с лавками и подставками*/
+.about__bench{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, auto);
+    color: #7c2165;
+}
+.bench__table{
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+.bench__paragraph{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.for__table{
+    width: 90%;
+    margin: 0 auto;
+    font-family: Philosopher,sans-serif;
+    color: #7c2165;
+    margin-bottom: 40px;
+}
+.for__table-padding{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.bench__img{
+    grid-column-start: 3;
+    grid-column-end: -1;
+    margin-bottom: 50px;
+}
+/*страницы со стеллажами*/
+.list__dotes{
+    padding-top: 10px;
+    list-style-type: circle;
+}
+.paragraf__padding{
+    margin-top: 20px;
+}
+.shelving__container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+
+}
+.shelving__title{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    font-size: 1.5rem;
+    color: #602750;
+}
+.shelving__title-mini{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    font-size: 1.125rem;
+    color: #602750;
+}
+.head__shelving{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    margin-left: 50px;
+}
+.full__image{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    margin: 0 auto;
+    margin-top: -100px;
+}
+.full__image-padding{
+    padding-top: 70px;
+}
+.full__image-width{
+    width: 400px;
+}
+.little__image{
+    grid-column-start: 5;
+    grid-column-end: -1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+.small__image{
+    grid-column-start: 5;
+    grid-column-end: -1;
+    display: grid;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-columns: repeat(3, minmax(70px, 100px));
+    grid-auto-rows: auto;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
+.small__image-width{
+    width: 100px;
+    height: 100px;
+}
+.table__text{
+    grid-column-start: 5;
+    grid-column-end: -1;
+    margin: 0 auto;
+    text-align: center;
+    color: #5a1a4a;
+    margin-left: 30px;
+}
+.shelving__table{
+    width: 100%;
+}
+.table__paragraff{
+    margin: 20px auto;
+}
+.aksess_color{
+    color: #602750;
+}
+/*перечень дверей*/
+.about__entryDoor{
+    display: grid;
+    column-gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-auto-rows: 370px;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: 10px 20px;
+    color: #5a1a4a;
+}
+.about__door{
+    border: 3px solid #5a1a4a;
+    display: grid;
+    border-radius: 5px;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 20px;
+}
+.about__door-height{
+    height: 350px;
+}
+.about__text{
+    margin-left: 20px;
+    grid-column-start: 2;
+    grid-column-end: -1;
+    display: grid;
+    grid-auto-rows: 40px;
+}
+.paragraf__lineHeight{
+    line-height: 1rem;
+}
+.door__button{
+    width: 250px;
+    height: 60px;
+    padding: 20px 50px;
+}
+.door__button-line{
+    margin-top: 170px;
+    width: 200px;
+    height: 60px;
+    padding: 20px 50px;
+}
+.img__width{
+    height: 310px;
+    width: 158px;
+}
+.about__info-title{
+    padding-bottom: 10px;
+}
+/*страницы с дверьми*/
+.door__info{
+    display: grid;
+    column-gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    margin: 10px 20px;
+    margin-left: 40px;
+    color: #5a1a4a;
+    border-bottom: 2px solid #5a1a4a;
+    padding-bottom: 40px;
+    font-family: Philosopher,sans-serif;
+}
+/*заголовок страницы*/
+.door__title{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    font-family: Philosopher,sans-serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 1.250rem;
+}
+/*картинки с полным размером двери*/
+.full__img-size{
+    width: 180px;
+    height: 294px;
+}
+.full__image-height{
+    height: 304px;
+}
+/*расположение небольших картинок*/
+.pieces__img{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    left: 27%;
+    top: 30%;
+}
+.pieces__img-marginTop{
+    top: 30%;
+}
+/*размер небольших картинок*/
+.pieces__img-size{
+    height: 100px;
+    width: 100px;
+    margin-bottom: 30px;
+}
+/* располоение цветовой гаммы*/
+.color__img{
+    display: flex;
+    padding-top: 20px;
+}
+/*расстояние между цветовыми гаммами*/
+.right__pieces{
+    margin-left: 20px;
+}
+/*отступ с картинками цветовой гаммы*/
+.color__img-padding{
+    padding: 5px;
+}
+/*основное описание двери*/
+.text__img{
+    margin-left: 50px;
+    line-height: 1.5rem;
+    font-size: 1.125rem;
+}
+.sale__door{
+    margin-top: 20px;
+}
+.sale__door-size{
+    font-size: 1.5rem;
+    color: #10cabf;
+    margin-top: 10px;
+}
+/*контейнер со спецификацией*/
+.table__door{
+    margin: 10px 20px;
+    color: #5a1a4a;
+    font-family: Philosopher,sans-serif;
+    margin-bottom: 40px;
+    margin-left: 40px;
+}
+/*размеры таблицы*/
+.door__table{
+    width: 100%;
+    height: 200px;
+}
+/*противопожарные двери*/
+.about__noFire{
+    display: grid;
+    grid-template-columns: 300px auto;
+    display: grid;
+    column-gap: 40px;
+    margin: 10px 20px;
+    margin-left: 40px;
+    color: #5a1a4a;
+    border-bottom: 2px solid #5a1a4a;
+    padding-bottom: 40px;
+    font-family: Philosopher,sans-serif;
+}
+.noFire__door{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 200px;
+}
+.left__list{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.right__list{
+    grid-column-start: 2;
+    grid-column-end: -1;
+}
+.piecesImg{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    // width: 100%;
+    margin-right: 20%;
+}
